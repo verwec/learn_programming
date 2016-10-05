@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# coding: utf-8
+LIB_DIR = File.expand_path('../lib', __dir__)
+$LOAD_PATH.unshift LIB_DIR unless $LOAD_PATH.include? LIB_DIR
+
+require 'ruby_trainer/runner'
+
+RubyTrainer::Runner.start
