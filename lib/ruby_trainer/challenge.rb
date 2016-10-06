@@ -1,6 +1,5 @@
 module RubyTrainer
   class Challenge
-
     def self.build(&block)
       new(&block)
     end
@@ -9,7 +8,7 @@ module RubyTrainer
       instance_eval(&block) if block
     end
 
-    def help(value=nil)
+    def help(value = nil)
       return @help if @help
       @help = value
     end
@@ -19,12 +18,12 @@ module RubyTrainer
       @test = value
     end
 
-    def success_message(value=nil)
+    def success_message(value = nil)
       return @success_message if @success_message
       @success_message = value
     end
 
-    def error_message(value=nil)
+    def error_message(value = nil)
       return @error_message if @error_message
       @error_message = value
     end
