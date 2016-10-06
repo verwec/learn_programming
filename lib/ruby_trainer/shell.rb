@@ -8,6 +8,7 @@ module RubyTrainer
     end
 
     def before_loop
+
       super
       @challenge_counter = -1
       next_challenge
@@ -22,7 +23,7 @@ module RubyTrainer
         puts current_challenge.success_message if test_succeeded
         next_challenge
       else
-        puts current_challenge.error_message
+        puts @error? @error : current_challenge.error_message
       end
     end
 
